@@ -1,7 +1,7 @@
-# D-and-DAO
+# D&DAO
 Dungeons and Dragons on the Ethereum Blockchain 
 
-
+![](https://i.imgur.com/4BznZ0r.gif)
 
 Welcome to the world of Dungeons and Dragons on the blockchain. The aim of this project is to create a fun an enjoyable RPG experience 
 while using Ethereum ERC-20 tokens as in-game currency. 
