@@ -2,6 +2,7 @@
 ### Dungeons and Dragons on the Ethereum Blockchain 
 
 ![](https://i.imgur.com/urKnMPj.png)
+Art Concept by Ron Donson 
 
 Welcome to the world of Dungeons and Dragons on the blockchain. The aim of this project is to create a fun an enjoyable RPG experience 
 while using Ethereum ERC-20 tokens as in-game currency.
