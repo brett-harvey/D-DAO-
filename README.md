@@ -1,5 +1,5 @@
 # D & DAO
-Dungeons and Dragons on the Ethereum Blockchain 
+### Dungeons and Dragons on the Ethereum Blockchain 
 
 ![](https://i.imgur.com/urKnMPj.png)
 
