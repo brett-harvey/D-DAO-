@@ -1,0 +1,32 @@
+{
+  "contract_name": "CustomDice",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "numberOfFaces",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "name": "number_of_faces",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "constructor"
+    }
+  ],
+  "unlinked_binary": "0x60606040523415600e57600080fd5b6040516020806100cb833981016040528080519150505b60008190555b505b60908061003b6000396000f300606060405263ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416631556a57a8114603c575b600080fd5b3415604657600080fd5b604c605e565b60405190815260200160405180910390f35b600054815600a165627a7a723058203334d8460e399f7aeb2cb0a41aba4c979f020bfdf6f9a004bdadfd7361c026810029",
+  "networks": {},
+  "schema_version": "0.0.5",
+  "updated_at": 1507691579337
+}
