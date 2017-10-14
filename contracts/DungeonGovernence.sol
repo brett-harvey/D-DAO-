@@ -17,11 +17,15 @@ contract Dungeon is DungeonMaster {
   mapping (address => uint256) public GoldCharacterBalance;
   mapping (address => uint256) public ManaCharacterBalance;
   mapping (address => uint256) public FoodCharacterBalance;
-  mapping (address => uint256) public SwordInvetory;
+  mapping (address => uint256) public BronzeSwordInvetory;
+  mapping (address => uint256) public SilverSwordInvetory;
+  mapping (address => uint256) public GoldSwordInvetory;
+  mapping (address => uint256) public RubySwordInvetory;
 
   uint public SwordPrice;
 
   event ItemAdded(address CharacterAddress, string ItemName, uint Amount);
+  event ItemRemoved(address CharacterAddress, string ItemName, uint Amount);
 
 
   function Dungeon(address DungonMaster)  {
@@ -54,10 +58,36 @@ contract Dungeon is DungeonMaster {
 
   function BuySword(address _character, uint _amount) {
     if (GoldCharacterBalance[_character] >= SwordPrice) {
-        SwordInvetory[_character] += _amount;
+        BronzeSwordInvetory[_character] += _amount;
         GoldCharacterBalance[_character] -= SwordPrice * _amount;
         GoldCharacterBalance[this] += SwordPrice;
         ItemAdded(_character, "Sword", _amount);
+        ItemRemoved(_character, "Gold", SwordPrice);
       }
+  }
+
+  /* Forge Weapons  */
+  function ForgeSilverSword(address _forger) {
+    if (BronzeSwordInvetory[_forger] >= 3) {
+      BronzeSwordInvetory[_forger] -= 3;
+      SilverSwordInvetory[_forger] += 1;
+      ItemAdded(_forger, "Silver Sword", 1);
+    }
+  }
+
+  function ForgeGoldSword(address _forger) {
+    if (SilverSwordInvetory[_forger] >= 3) {
+      SilverSwordInvetory[_forger] -= 3;
+      GoldSwordInvetory[_forger] += 1;
+      ItemAdded(_forger, "Gold Sword", 1);
+    }
+  }
+
+  function ForgeRubySword(address _forger) {
+    if (GoldSwordInvetory[_forger] >= 3) {
+      GoldSwordInvetory[_forger] -= 3;
+      RubySwordInvetory[_forger] += 1;
+      ItemAdded(_forger, "Ruby Sword", 1);
+    }
   }
 }
