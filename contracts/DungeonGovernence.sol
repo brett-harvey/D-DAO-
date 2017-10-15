@@ -26,7 +26,9 @@ contract Dungeon is DungeonMaster {
 
   event ItemAdded(address CharacterAddress, string ItemName, uint Amount);
   event ItemRemoved(address CharacterAddress, string ItemName, uint Amount);
-
+  event Action(address CharacterAddress, string ActionType, uint distance);
+  event Attack(address CharacterAddress, string AttackType,
+    string WeaponsUsed, uint Points);
 
   function Dungeon(address DungonMaster)  {
     if (DungonMaster == 0) DungonMaster = msg.sender;
@@ -49,6 +51,20 @@ contract Dungeon is DungeonMaster {
   function MintFood(address _character, uint _amount) OnlyDungeonMaster {
     FoodCharacterBalance[_character] += _amount;
     ItemAdded(_character, "Food", _amount);
+  }
+
+  /* Move */
+  function MoveForward(address _user, uint _spacesMoved) {
+    Action(_user, "Moved Forward", _spacesMoved);
+  }
+
+  /* Combat */
+  function Attack(address _user, string _attackType, string _weaponUsed,
+    uint _attackPoints) {
+      if (_weaponUsed == "Sword") {
+
+      }
+      Attack(_user, _attackType, _weaponUsed, _attackPoints);
   }
 
   /* Dungeon Market */
