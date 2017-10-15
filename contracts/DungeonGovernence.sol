@@ -59,12 +59,9 @@ contract Dungeon is DungeonMaster {
   }
 
   /* Combat */
-  function Attack(address _user, string _attackType, string _weaponUsed,
-    uint _attackPoints) {
-      if (_weaponUsed == "Sword") {
-
-      }
-      Attack(_user, _attackType, _weaponUsed, _attackPoints);
+  function PlayerAttack(address _user,string _attack, 
+  string _weaponUsed, uint _attackPoints) {
+      Attack(_user, _attack, _weaponUsed, _attackPoints);
   }
 
   /* Dungeon Market */
