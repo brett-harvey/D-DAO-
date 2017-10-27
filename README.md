@@ -1,5 +1,5 @@
-### Dungeons and Dragons on the Blockchain
-Dungeons and Dragons on the Ethereum Blockchain. Feel free to contribute or leave feedback! Thanks :D
+### Dungeons and Dragons on the Ethereum Classic Blockchain
+A Dungeons and Dragons style game built ontop of the Ethereum Classic Blockchain. Feel free to contribute or leave feedback! Thanks :D
 
 ![](https://i.imgur.com/urKnMPj.png)
 
